@@ -7,7 +7,7 @@ FROM node:20-alpine AS node-builder
 WORKDIR /app
  
 COPY package*.json ./
-RUN npm ci --ignore-scripts
+RUN npm install --ignore-scripts
  
 COPY . .
 RUN npm run build
